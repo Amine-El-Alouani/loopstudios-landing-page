@@ -1,0 +1,23 @@
+body {
+  font-size: var(--fs-400);
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+   width: 80%;
+   @media (max-width: 48rem) {
+    width: 85%;
+    overflow: hidden;
+  }
+}

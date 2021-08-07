@@ -1,0 +1,102 @@
+.footer {
+  background-color: var(--Black);
+  color: var(--White);
+  font-family: "Alata", sans-serif;
+  padding-top: 2.8125rem;
+  padding-bottom: 1.25rem;
+  @media (max-width: 48rem) {
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 48rem) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .footer_left {
+      .logo {
+        margin-bottom: 2.5rem;
+        @media (max-width: 48rem) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      .footer_links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 48rem) {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        li {
+          position: relative;
+          &:hover {
+            &::before {
+              opacity: 1;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            content: "";
+            top: 1.875rem;
+            left: 25%;
+            width: 1.5625rem;
+            height: 0.125rem;
+            background-color: white;
+            opacity: 0;
+          }
+          a {
+            color: var(--White);
+          }
+          @media (max-width: 48rem) {
+          }
+        }
+      }
+
+      li:not(:last-child) {
+        margin-right: 2.1875rem;
+        @media (max-width: 48rem) {
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .footer_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .footer_social {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: 48rem) {
+          justify-content: center;
+        }
+
+        img {
+          @media (max-width: 48rem) {
+            margin-top: 2.5rem;
+          }
+        }
+
+        img:not(:last-child) {
+          margin-right: 0.625rem;
+          @media (max-width: 48rem) {
+            margin-right: 1rem;
+          }
+        }
+      }
+      .footer_credits {
+        color: var(--DarkGray);
+        margin-top: 1.5625rem;
+        @media (max-width: 48rem) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
